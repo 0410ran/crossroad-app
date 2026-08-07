@@ -1,5 +1,25 @@
 'use client';
+import Link from 'next/link';
 
+// ... (既存のコード)
+
+{/* ボタンを置きたい場所に以下を貼り付けます */}
+<div style={{ padding: '10px', textAlign: 'right' }}>
+  <Link 
+    href="/admin" 
+    style={{
+      padding: '10px 20px',
+      backgroundColor: '#4F46E5', // お好みの色に変更できます
+      color: 'white',
+      borderRadius: '8px',
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      display: 'inline-block'
+    }}
+  >
+    👨‍🏫 先生用ダッシュボードへ
+  </Link>
+</div>
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 
