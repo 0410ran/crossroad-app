@@ -1,23 +1,21 @@
 'use client';
 
-// 1. import に Link を追加します
 import Link from 'next/link';
-// (ここに元々あった import 文が並びます)
+// (他に必要な import があればそのまま残してください)
 
 export default function Home() {
-  // (ここに元々あった state や関数などの処理)
+  // (ここに元々あった const や function などの処理)
 
   return (
-    <div>
-      {/* 2. 生徒用画面の一番上（ヘッダー部分）に先生用ボタンを設置 */}
+    <>
+      {/* 👨‍🏫 画面上部の先生用ボタン */}
       <header style={{ 
         display: 'flex', 
-        justify: 'space-between', 
+        justifyContent: 'space-between', 
         alignItems: 'center', 
         padding: '12px 20px', 
         backgroundColor: '#f8fafc',
-        borderBottom: '1px solid #e2e8f0',
-        marginBottom: '20px'
+        borderBottom: '1px solid #e2e8f0'
       }}>
         <span style={{ fontWeight: 'bold', fontSize: '16px', color: '#334155' }}>
           🎓 生徒用画面
@@ -38,9 +36,11 @@ export default function Home() {
         </Link>
       </header>
 
-      {/* 3. ここから下に元々の生徒用画面のコード（問題やフォームなど） */}
-      
-    </div>
+      {/* 🎓 ここから下に元々あった生徒用画面のコード */}
+      <main style={{ padding: '20px' }}>
+        {/* 元々のコンテンツ */}
+      </main>
+    </>
   );
 }
 import { useState, useEffect } from 'react';
